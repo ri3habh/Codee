@@ -1,0 +1,121 @@
+import random
+print("Welcome to NBA My Player")
+name = input("To begin, what is your name?")
+weight = int(input("Please enter your player's weight(in lbs). Note, this will impact what position you play at, and will affect gameplay."))
+height = int(input("Please also enter your player's height (in cm). Note, this also impacts gameplay."))
+if height <= 190:
+    if weight < 175:
+        print("You have chosen a lightweight Point Guard!")
+        build = "PG"
+        print("Your primary job is to facilitate scoring opportunities for your team, or sometimes for yourselves.")
+    else:
+        print("You have chosen a heavyweight Point Guard!")
+        build = "PG"
+        print("Your primary job is to facilitate scoring opportunities for your team, or sometimes for yourselves.")
+elif height > 191 and height < 200:
+    if weight < 195:
+        print("You have chosen a lightweight Shooting Guard!")
+        build = "SG"
+        print("A shooting guard's main objective is to score points for their team and steal the ball on defense.")
+    else:
+        print("You have chosen a heavyweight Shooting Guard!")
+        build = "SG"
+        print("A shooting guard's main objective is to score points for their team and steal the ball on defense.")
+elif height > 201 and height < 210:
+    if weight < 225:
+        print("You have chosen a lightweight Small Forward")
+        build = "SF"
+        print("Small forwards are responsible for scoring points, defending and often as secondary or tertiary rebounders behind the power forward and center, although a few have considerable passing responsibilities.")
+    else:
+        print("You have chosen a heavyweight Small Forward")
+        build = "SF"
+        print("Small forwards are responsible for scoring points, defending and often as secondary or tertiary rebounders behind the power forward and center, although a few have considerable passing responsibilities.")
+elif height > 211 and height < 215:
+    if weight < 230:
+        print("You have chosen a lightweight Power Forward")
+        build = "PF"
+        print("They play close to the basket, fighting for rebounds and posting up on offense.")
+    else:
+        print("You have chosen a heavyweight Power Forward")
+        build = "PF"
+        print("They play close to the basket, fighting for rebounds and posting up on offense.")
+else:
+    if weight < 250:
+        print("You have chosen a lightweight Center")
+        build = "C"
+        print("Defensively, the two main responsibilites of a center is to defend the basket and rebound the basketball. Offensively, Centers are good in the paint")
+    else:
+        print("You have chosen a heavyweight Center")
+        build = "C"
+        print("Defensively, the two main responsibilites of a center is to defend the basket and rebound the basketball. Offensively, Centers are good in the paint")
+print("Your coming off a great high school career, but you still have to choose whether you want to go to college, the G League, or overseas to start your carrer.")
+first = int(input("Type 1 to go to college, 2 to go to the G-League, and 3 to go overseas"))
+randint = random.randint(1, 28)
+if randint == 1:
+    GLeagueteam = "Maine Red Claws"
+elif randint == 2:
+    GLeagueteam = "South Bay Lakers"
+elif randint == 3:
+    GLeagueteam = "Raptors 905"
+elif randint == 4:
+    GLeagueteam = "Santa Cruz Warriors"
+elif randint == 5:
+    GLeagueteam = "Delaware Blue Coats"
+elif randint == 6:
+    GLeagueteam = "Iowa Wolves"
+elif randint == 7:
+    GLeagueteam = "Fort Wayne Mad Ants"
+elif randint == 8:
+    GLeagueteam = "Oklahoma City Blue"
+elif randint == 9:
+    GLeagueteam = "Texas Legends"
+elif randint == 10:
+    GLeagueteam = "Rio Grande Valley Vipers"
+elif randint == 11:
+    GLeagueteam = "Austin Spurs"
+elif randint == 12:
+    GLeagueteam = "Westcester Knicks"
+elif randint == 13:
+    GLeagueteam = "Windy City Bulls"
+elif randint == 14:
+    GLeagueteam = "Canton Charge"
+elif randint == 15:
+    GLeagueteam = "Stockton Kings"
+elif randint == 16:
+    GLeagueteam = "Grand Rapids Drive"
+elif randint == 17:
+    GLeagueteam = "Lakeland Magic"
+elif randint == 18:
+    GLeagueteam = "Salt Lake City Stars"
+elif randint == 19:
+    GLeagueteam = "Northern Arizona Suns"
+elif randint == 20:
+    GLeagueteam = "Sioux Falls Skyforce"
+elif randint == 21:
+    GLeagueteam = "College Park Skyhawks"
+elif randint == 22:
+    GLeagueteam = "Long Island Nets"
+elif randint == 23:
+    GLeagueteam = "Wisconsin Herd"
+elif randint == 24:
+    GLeagueteam = "Agua Caliente Clippers"
+elif randint == 25:
+    GLeagueteam = "Capital City Go-Go"
+elif randint == 26:
+    GLeagueteam = "Erie Bayhawks"
+elif randint == 27:
+    GLeagueteam = "Greensboro Swarm"
+elif randint == 28:
+    GLeagueteam = "Mephis Hustle"
+
+while first == 1 or first == 2 or first == 3:
+    if first == 1:
+        print("College it is! You have offers from Ohio State, Alabama University, and Baylor.")
+        college = input("Which college will you like to go to?")
+    elif first == 2:
+        print("The G-League! After much careful consideration, the", GLeagueteam, " has chosen you!, Congratulations!")
+    elif first == 3:
+        print("Unfortunatly, there isn't much demand for a player of your skillset, so your only option is") #Finish later
+else:
+    print("Sorry, please try again")
+    first = int(input("Type 1 to go to college, 2 to go to the G-League, and 3 to go overseas"))
